@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" media="screen" />
+    <title>Aula 3!</title>
+</head>
+<body>
+    <header>
+        Dr Rafael Sordi
+    </header>
+
+    <hr>
+    
+    <nav>
+        <a href="index.html">Home</a> - 
+        <a href="curriculo.html">Currículo</a> - 
+        <a href="especialidades.html">Especialidades</a> - 
+        <a href="contato.html">Contato</a> 
+    </nav>
+
+    <hr>
+
+    <main>
+        <h1>Contato</h1>
+
+        <form>
+            <fieldset>
+                <legend>Formulário</legend>
+                <label>Agende sua consulta. Por favo indique sua preferencia por dia e horario. Apos checarmos a disponibilidade entraremos em contato com voce para confirmacao</label>
+                
+                <hr>
+                <br>
+                
+                <label>Seu Nome:</label>
+                <input type="text" required autofocus>
+
+                <br>
+                <br>
+
+                <label>Seu e-mail:</label>
+                <input type="email" required>
+
+                <br>
+                <br>
+
+                <label>Seu telefone:</label>
+                <input type="tel" required>
+
+                <br>
+                <br>
+                
+                <label>Consultorio de Pref.</label>
+                <select name="consult" id="consult">
+                    <option value="Seleciona um Consultorio" hidden>Selecione um consultorio</option>
+                    <option value="analia franco">Analia franco</option>
+                    <option value="sao miguel">Sao miguel</option>
+                </select>
+
+                <br>
+                <br>
+
+                <label>Data da consulta:</label>
+                <input type="date">
+
+                <br>
+                <br>
+
+                <label>Como chegou no nosso site?</label>
+                <select name="conheceu" id="conheceu">
+                    <option value="Seleciona uma opção" hidden>Selecione uma opção</option>
+                    <option value="Tiktok">Tiktok</option>
+                    <option value="Youtube">Youtube</option>
+                    <option value="Instagram">Instagram</option>
+                </select>
+
+                <br>
+                <br>
+
+                <label>Alguma informação extra?</label>
+                <textarea rows="5" role="5" required></textarea>
+
+                <br>
+                <br>
+
+                <button type="submit">Enviar</button>
+            </fieldset>
+        </form>
+    </main>
+
+    <footer>Dr Rafael Sordi</footer>
+</body>
+</html>
