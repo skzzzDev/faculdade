@@ -1,0 +1,266 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(180deg, #eaf4fb 0%, #dceefb 100%);
+  min-height: 100vh;
+  padding: 30px 20px;
+}
+
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.page-header h1 {
+  color: #14507e;
+  font-size: 28px;
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  color: #547a94;
+  font-size: 14px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 4px 20px rgba(20, 80, 126, 0.08);
+  padding: 28px;
+}
+
+.form-card form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 18px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.field.full {
+  grid-column: 1 / -1;
+}
+
+label {
+  margin-bottom: 6px;
+  font-weight: 600;
+  font-size: 13px;
+  color: #2b4a63;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1.5px solid #d8e4ec;
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: #fbfdfe;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #1b6ca8;
+  box-shadow: 0 0 0 3px rgba(27, 108, 168, 0.15);
+}
+
+button {
+  grid-column: 1 / -1;
+  margin-top: 8px;
+  padding: 13px;
+  background-color: #1b6ca8;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s ease, transform 0.1s ease;
+}
+
+button:hover {
+  background-color: #145786;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+#mensagem {
+  margin-top: 14px;
+  text-align: center;
+  font-weight: 600;
+  color: #1a9c5c;
+  min-height: 18px;
+}
+
+.list-card {
+  max-height: 640px;
+  display: flex;
+  flex-direction: column;
+}
+
+.list-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.list-card-header h2 {
+  color: #14507e;
+  font-size: 18px;
+}
+
+.badge-count {
+  background-color: #1b6ca8;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  min-width: 26px;
+  height: 26px;
+  border-radius: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 8px;
+}
+
+#listaPacientes {
+  list-style: none;
+  overflow-y: auto;
+  padding-right: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#listaPacientes::-webkit-scrollbar {
+  width: 6px;
+}
+
+#listaPacientes::-webkit-scrollbar-thumb {
+  background-color: #cfe1ec;
+  border-radius: 3px;
+}
+
+.paciente-card {
+  background-color: #f6fafd;
+  border: 1px solid #e3edf3;
+  border-radius: 10px;
+  padding: 14px;
+  display: flex;
+  gap: 12px;
+}
+
+.avatar {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #1b6ca8;
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.paciente-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.paciente-info .nome {
+  font-weight: 700;
+  color: #14507e;
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.paciente-info .linha {
+  font-size: 13px;
+  color: #4c6b81;
+  margin-bottom: 2px;
+  overflow-wrap: break-word;
+}
+
+.paciente-info .linha strong {
+  color: #2b4a63;
+}
+
+.convenio-badge {
+  display: inline-block;
+  margin-top: 4px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.convenio-badge.sim {
+  background-color: #dff5e6;
+  color: #1a9c5c;
+}
+
+.convenio-badge.nao {
+  background-color: #f1f1f1;
+  color: #777;
+}
+
+.empty-state {
+  text-align: center;
+  color: #8ba3b5;
+  font-size: 14px;
+  padding: 30px 10px;
+}
+
+@media (max-width: 860px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .list-card {
+    max-height: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .form-card form {
+    grid-template-columns: 1fr;
+  }
+
+  .field.full,
+  .field {
+    grid-column: 1 / -1;
+  }
+}
